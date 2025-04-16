@@ -1,0 +1,8 @@
+pandas
+requests
+bs4
+pyspark
+pymongo
+selenium
+sqlalchemy
+jproperties

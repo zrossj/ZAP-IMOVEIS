@@ -1,0 +1,6 @@
+version: 2
+
+models:
+  - name: gold_apartment_rent
+    description: >
+      This model contains data about apartments for rent in Sao Paulo.

@@ -1,0 +1,19 @@
+name: zap_imoveis
+version: '1.0'
+
+profile: zap
+
+
+models:
+  mart:
+    # gold_house_rent:
+    #   +materialized: table
+    gold_apartment_avg_prices:
+      +materialized: table
+    #gold_studio_rent:
+    #   +materialized: table
+    gold_flats_avg_prices:
+      +materialized: table
+
+
+model-paths: ["models"]

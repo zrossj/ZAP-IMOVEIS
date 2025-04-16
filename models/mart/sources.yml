@@ -1,0 +1,9 @@
+version: 2
+
+
+sources:
+  - name: zap_imo
+    database: foo
+    schema: zap
+    tables:
+      - name: silver_zapimoveis
