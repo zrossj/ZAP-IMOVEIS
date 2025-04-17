@@ -6,3 +6,4 @@ pymongo
 selenium
 sqlalchemy
 jproperties
+psyocpg2-binary
