@@ -21,9 +21,9 @@ def catalog_page_scraper(start_page: int, last_page = None):
     dc_pages_html_content = {}
     for page_num in range(start_page, last_page+1):
         
-        # max size will be 1000
+        # IMPORTANT! Define the max floor_size for your scrape here, on the pace variable. 
         
-        pace = np.arange(0, 1100, 100)
+        pace = np.arange(0, 400, 100)
         bins = list(zip(pace[:-1], pace[1:]))
         page_content_bybin = []
         
@@ -38,7 +38,7 @@ def catalog_page_scraper(start_page: int, last_page = None):
 
             # setting webdriver;
             options = Options()
-            options.add_argument("-headless")  
+            #options.add_argument("-headless")  
             driver = webdriver.Firefox(options=options)
             driver.get(url)
 
