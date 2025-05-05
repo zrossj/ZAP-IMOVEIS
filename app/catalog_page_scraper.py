@@ -14,8 +14,6 @@ def catalog_page_scraper(start_page: int, last_page = None):
 
     if last_page == None:
         last_page = start_page
-    
-
 
 
     dc_pages_html_content = {}
@@ -25,6 +23,7 @@ def catalog_page_scraper(start_page: int, last_page = None):
         
         pace = np.arange(0, 400, 100)
         bins = list(zip(pace[:-1], pace[1:]))
+        bins = [(x+1, y) for x,y in bins]
         page_content_bybin = []
         
         for min_m2, max_m2 in bins:
