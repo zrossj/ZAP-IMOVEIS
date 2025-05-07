@@ -1,0 +1,22 @@
+
+    
+    
+
+with all_values as (
+
+    select
+        rank_floorsize as value_field,
+        count(*) as n_records
+
+    from "foo"."zap"."gold_floorsize_ranked_avg_prices"
+    group by rank_floorsize
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'A','B','C','D','E'
+)
+
+

@@ -1,6 +1,56 @@
 version: 2
 
 models:
-  - name: gold_apartment_rent
+  - name: gold_floorsize_ranked_avg_prices
     description: >
-      This model contains data about apartments for rent in Sao Paulo.
+      This model contains data on real estate in Sao Paulo available for rent and/or sale, generated from querying the silver layer of this project. Additionally, it includes a column that ranks
+      each property based on the floor size (m2) using thresholds that were arbitrarily chosen. 
+  
+    columns: 
+    - name: id
+      description: ID obtained from the scraped HTML - it appears to be used as a unique identifier
+      tests: 
+        - not_null
+        - unique
+
+    - name: kind
+      description: Describes the type of property (e.g., apartment, house) 
+      tests: 
+        - not_null
+
+    - name: price_rent
+      description: The price listed for rent (if this option is available)
+
+    - name: price_sale
+      description: The price listed for sale (if this option is available)
+
+    - name: price_condominium
+      description: The monthly condominium fee
+  
+    - name: floor_size
+      description: Property area in square meters
+      tests: 
+        - not_null
+
+    - name: floor_size_rank
+      description: The rank assigned to the property.
+      tests:
+        - not_null
+        - accepted_values:
+            values: ['A', 'B', 'C', 'D', 'E']
+
+      
+
+# from 'air_conditioning' to 'COWORKING' there are boolean values meaning 1 for the presence and 0 for the absence in the data scraped; 
+
+
+
+
+
+
+
+
+
+
+
+        

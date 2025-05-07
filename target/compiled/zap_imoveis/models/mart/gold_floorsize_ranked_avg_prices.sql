@@ -5,14 +5,16 @@ rank_floorsize as (
 	select 
 	*, 
 	case 
-		when sz.floor_size > 20 and sz.floor_size <= 50
+		when sz.floor_size <= 30
+		then 'E'
+		when sz.floor_size <= 60
+		then 'D'
+		when sz.floor_size <= 90
 		then 'C'
-		when sz.floor_size > 50 and sz.floor_size <= 80
+		when sz.floor_size <= 120
 		then 'B'
-		when sz.floor_size > 80 and sz.floor_size <= 110
-		then 'A'
-        WHEN sz.floor_size > 110
-        THEN 'S'
+        WHEN sz.floor_size > 120
+        THEN 'A'
 	end as floor_size_rank
 	from source sz 
 )
