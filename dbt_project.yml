@@ -5,15 +5,10 @@ profile: zap
 
 
 models:
-  mart:
-    # gold_house_rent:
-    #   +materialized: table
-    gold_apartment_avg_prices:
-      +materialized: table
-    #gold_studio_rent:
-    #   +materialized: table
-    gold_flats_avg_prices:
-      +materialized: table
+    zap_imoveis:
+      mart:
+        gold_floorsize_ranked_avg_prices:
+          +materialized: table
 
 
 model-paths: ["models"]

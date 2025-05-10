@@ -1,8 +1,13 @@
 
-  create view "foo"."zap"."gold_floorsize_ranked_avg_prices__dbt_tmp"
+  
     
-    
-  as (
+
+  create  table "foo"."zap"."gold_floorsize_ranked_avg_prices__dbt_tmp"
+  
+  
+    as
+  
+  (
     with source as (
     SELECT * FROM "foo"."zap"."silver_zapimoveis" 
 ),
@@ -29,3 +34,4 @@ price_rent/floor_size as price_rent_per_m2
 from rank_floorsize 
 order by price_rent_per_m2
   );
+  
