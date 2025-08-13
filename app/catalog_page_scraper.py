@@ -30,14 +30,14 @@ def catalog_page_scraper(start_page: int, last_page = None):
             
             
             
-            # we filtered for obtain only non comercial places. 
+            # we filtered to obtain only non comercial places. 
             
             url = f"https://www.zapimoveis.com.br/aluguel/apartamentos/sp+sao-paulo/?transacao=aluguel&onde=,S%C3%A3o%20Paulo,S%C3%A3o%20Paulo,,,,,city,BR%3ESao%20Paulo%3ENULL%3ESao%20Paulo,-23.532633,-46.791524,&tipos=apartamento_residencial,studio_residencial,kitnet_residencial,casa_residencial,sobrado_residencial,condominio_residencial,casa-vila_residencial,cobertura_residencial,flat_residencial,loft_residencial,granja_residencial&pagina={page_num}&areaMinima={str(min_m2)}&areaMaxima={str(max_m2)}&ordem=Maior área"
 
 
             # setting webdriver;
             options = Options()
-            #options.add_argument("-headless")  
+            options.add_argument("-headless")  
             driver = webdriver.Firefox(options=options)
             driver.get(url)
 

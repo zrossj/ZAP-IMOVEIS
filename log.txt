@@ -1,0 +1,5 @@
+WARNING:selenium.webdriver.common.selenium_manager:Problem reading geckodriver versions: error sending request for url (https://raw.githubusercontent.com/SeleniumHQ/selenium/trunk/common/geckodriver/geckodriver-support.json). Using latest geckodriver version
+WARNING:selenium.webdriver.common.selenium_manager:There was an error managing geckodriver (error sending request for url (https://github.com/mozilla/geckodriver/releases/latest)); using driver found in the cache
+WARNING:selenium.webdriver.common.selenium_manager:Error sending stats to Plausible: error sending request for url (https://plausible.io/api/event)
+WARNING:selenium.webdriver.common.selenium_manager:Problem reading geckodriver versions: error sending request for url (https://raw.githubusercontent.com/SeleniumHQ/selenium/trunk/common/geckodriver/geckodriver-support.json). Using latest geckodriver version
+WARNING:selenium.webdriver.common.selenium_manager:There was an error managing geckodriver (error sending request for url (https://github.com/mozilla/geckodriver/releases/latest)); using driver found in the cache

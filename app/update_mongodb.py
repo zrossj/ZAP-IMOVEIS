@@ -1,14 +1,18 @@
-    
-from pymongo import MongoClient
+
 import datetime as dt
 import numpy as np
+import app.connect_mongodb as cm
 
-client = MongoClient()
-db = client.zap_imoveis
+
+# connect to MongoDB
+connector = cm.Connect_MongoDB()
+db = connector.connect()
+
+
 
 docs = db.bronze.find({}) # get all the docs of collection `zap`
 ids = {doc.get('data-id') for doc in docs}
-    
+     
 # Creating Collection
 try:
     db.create_collection("bronze")
