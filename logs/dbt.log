@@ -27825,3 +27825,731 @@ drop table if exists "foo"."zap"."gold_floorsize_ranked_avg_prices__dbt_backup" 
 [0m01:12:52.451755 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff4d527aa10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff4d431f4f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff4d431ffa0>]}
 [0m01:12:52.454296 [debug] [MainThread]: Flushing usage events
 [0m01:12:53.491574 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m09:06:00.902967 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2adadde8f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2ad9d62da0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2ad9d62e00>]}
+
+
+============================== 09:06:00.914790 | 904cf372-b976-4099-a36b-0b99807c6f73 ==============================
+[0m09:06:00.914790 [info ] [MainThread]: Running with dbt=1.9.2
+[0m09:06:00.917181 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/syco/projects/ZAP-IMOVEIS', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/home/syco/projects/ZAP-IMOVEIS/logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt run', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m09:06:01.457133 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '904cf372-b976-4099-a36b-0b99807c6f73', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2ad91806d0>]}
+[0m09:06:01.599395 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '904cf372-b976-4099-a36b-0b99807c6f73', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2ada53ead0>]}
+[0m09:06:01.604422 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m09:06:02.585633 [debug] [MainThread]: checksum: 12b12750b70de726cfd89136b8e24afc3f3e77597a97bff40ab7e5f9b39d5e18, vars: {}, profile: , target: , version: 1.9.2
+[0m09:06:03.155815 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m09:06:03.157076 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m09:06:03.320677 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '904cf372-b976-4099-a36b-0b99807c6f73', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2ad7d000d0>]}
+[0m09:06:03.688276 [debug] [MainThread]: Wrote artifact WritableManifest to /home/syco/projects/ZAP-IMOVEIS/target/manifest.json
+[0m09:06:03.711389 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/syco/projects/ZAP-IMOVEIS/target/semantic_manifest.json
+[0m09:06:04.180272 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '904cf372-b976-4099-a36b-0b99807c6f73', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2ad81736d0>]}
+[0m09:06:04.204336 [info ] [MainThread]: Found 1 model, 6 data tests, 1 source, 433 macros
+[0m09:06:04.211646 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '904cf372-b976-4099-a36b-0b99807c6f73', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2ad8173010>]}
+[0m09:06:04.230813 [info ] [MainThread]: 
+[0m09:06:04.240423 [info ] [MainThread]: Concurrency: 2 threads (target='dev')
+[0m09:06:04.242025 [info ] [MainThread]: 
+[0m09:06:04.254708 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m09:06:04.271989 [debug] [ThreadPool]: Acquiring new postgres connection 'list_foo'
+[0m09:06:05.033833 [debug] [ThreadPool]: Using postgres connection "list_foo"
+[0m09:06:05.035900 [debug] [ThreadPool]: On list_foo: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "zap", "target_name": "dev", "connection_name": "list_foo"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m09:06:05.037476 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m09:06:05.144396 [debug] [ThreadPool]: SQL status: SELECT 5 in 0.107 seconds
+[0m09:06:05.148999 [debug] [ThreadPool]: On list_foo: Close
+[0m09:06:05.164095 [debug] [ThreadPool]: Acquiring new postgres connection 'list_foo_zap'
+[0m09:06:05.211724 [debug] [ThreadPool]: Using postgres connection "list_foo_zap"
+[0m09:06:05.216473 [debug] [ThreadPool]: On list_foo_zap: BEGIN
+[0m09:06:05.217992 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m09:06:05.262573 [debug] [ThreadPool]: SQL status: BEGIN in 0.044 seconds
+[0m09:06:05.264087 [debug] [ThreadPool]: Using postgres connection "list_foo_zap"
+[0m09:06:05.266124 [debug] [ThreadPool]: On list_foo_zap: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "zap", "target_name": "dev", "connection_name": "list_foo_zap"} */
+select
+      'foo' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'zap'
+    union all
+    select
+      'foo' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'zap'
+    union all
+    select
+      'foo' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'zap'
+  
+[0m09:06:05.278010 [debug] [ThreadPool]: SQL status: SELECT 2 in 0.011 seconds
+[0m09:06:05.281108 [debug] [ThreadPool]: On list_foo_zap: ROLLBACK
+[0m09:06:05.284218 [debug] [ThreadPool]: On list_foo_zap: Close
+[0m09:06:05.302405 [debug] [MainThread]: Using postgres connection "master"
+[0m09:06:05.303827 [debug] [MainThread]: On master: BEGIN
+[0m09:06:05.308369 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m09:06:05.362936 [debug] [MainThread]: SQL status: BEGIN in 0.055 seconds
+[0m09:06:05.369141 [debug] [MainThread]: Using postgres connection "master"
+[0m09:06:05.371147 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "zap", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m09:06:05.415666 [debug] [MainThread]: SQL status: SELECT 0 in 0.042 seconds
+[0m09:06:05.419131 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '904cf372-b976-4099-a36b-0b99807c6f73', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2ad8173a30>]}
+[0m09:06:05.422036 [debug] [MainThread]: On master: ROLLBACK
+[0m09:06:05.425003 [debug] [MainThread]: Using postgres connection "master"
+[0m09:06:05.426341 [debug] [MainThread]: On master: BEGIN
+[0m09:06:05.430958 [debug] [MainThread]: SQL status: BEGIN in 0.003 seconds
+[0m09:06:05.433091 [debug] [MainThread]: On master: COMMIT
+[0m09:06:05.434633 [debug] [MainThread]: Using postgres connection "master"
+[0m09:06:05.436154 [debug] [MainThread]: On master: COMMIT
+[0m09:06:05.440318 [debug] [MainThread]: SQL status: COMMIT in 0.002 seconds
+[0m09:06:05.448819 [debug] [MainThread]: On master: Close
+[0m09:06:05.479735 [debug] [Thread-1 (]: Began running node model.zap_imoveis.gold_floorsize_ranked_avg_prices
+[0m09:06:05.481825 [info ] [Thread-1 (]: 1 of 1 START sql table model zap.gold_floorsize_ranked_avg_prices .............. [RUN]
+[0m09:06:05.486781 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_foo_zap, now model.zap_imoveis.gold_floorsize_ranked_avg_prices)
+[0m09:06:05.488429 [debug] [Thread-1 (]: Began compiling node model.zap_imoveis.gold_floorsize_ranked_avg_prices
+[0m09:06:05.508280 [debug] [Thread-1 (]: Writing injected SQL for node "model.zap_imoveis.gold_floorsize_ranked_avg_prices"
+[0m09:06:05.510653 [debug] [Thread-1 (]: Began executing node model.zap_imoveis.gold_floorsize_ranked_avg_prices
+[0m09:06:05.732489 [debug] [Thread-1 (]: Writing runtime sql for node "model.zap_imoveis.gold_floorsize_ranked_avg_prices"
+[0m09:06:05.738130 [debug] [Thread-1 (]: Using postgres connection "model.zap_imoveis.gold_floorsize_ranked_avg_prices"
+[0m09:06:05.739897 [debug] [Thread-1 (]: On model.zap_imoveis.gold_floorsize_ranked_avg_prices: BEGIN
+[0m09:06:05.741469 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m09:06:05.782959 [debug] [Thread-1 (]: SQL status: BEGIN in 0.041 seconds
+[0m09:06:05.784787 [debug] [Thread-1 (]: Using postgres connection "model.zap_imoveis.gold_floorsize_ranked_avg_prices"
+[0m09:06:05.786085 [debug] [Thread-1 (]: On model.zap_imoveis.gold_floorsize_ranked_avg_prices: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "zap", "target_name": "dev", "node_id": "model.zap_imoveis.gold_floorsize_ranked_avg_prices"} */
+
+  
+    
+
+  create  table "foo"."zap"."gold_floorsize_ranked_avg_prices__dbt_tmp"
+  
+  
+    as
+  
+  (
+    with source as (
+    SELECT * FROM "foo"."zap"."silver_zapimoveis" 
+),
+rank_floorsize as (
+	select 
+	*, 
+	case 
+		when sz.floor_size <= 30
+		then 'E'
+		when sz.floor_size <= 60
+		then 'D'
+		when sz.floor_size <= 90
+		then 'C'
+		when sz.floor_size <= 120
+		then 'B'
+        WHEN sz.floor_size > 120
+        THEN 'A'
+	end as floor_size_rank
+	from source sz 
+)
+select
+*,
+price_rent/floor_size as price_rent_per_m2
+from rank_floorsize 
+order by price_rent_per_m2
+  );
+  
+[0m09:06:05.818260 [debug] [Thread-1 (]: SQL status: SELECT 181 in 0.030 seconds
+[0m09:06:05.852819 [debug] [Thread-1 (]: Using postgres connection "model.zap_imoveis.gold_floorsize_ranked_avg_prices"
+[0m09:06:05.854586 [debug] [Thread-1 (]: On model.zap_imoveis.gold_floorsize_ranked_avg_prices: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "zap", "target_name": "dev", "node_id": "model.zap_imoveis.gold_floorsize_ranked_avg_prices"} */
+alter table "foo"."zap"."gold_floorsize_ranked_avg_prices" rename to "gold_floorsize_ranked_avg_prices__dbt_backup"
+[0m09:06:05.858525 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.002 seconds
+[0m09:06:05.868582 [debug] [Thread-1 (]: Using postgres connection "model.zap_imoveis.gold_floorsize_ranked_avg_prices"
+[0m09:06:05.872198 [debug] [Thread-1 (]: On model.zap_imoveis.gold_floorsize_ranked_avg_prices: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "zap", "target_name": "dev", "node_id": "model.zap_imoveis.gold_floorsize_ranked_avg_prices"} */
+alter table "foo"."zap"."gold_floorsize_ranked_avg_prices__dbt_tmp" rename to "gold_floorsize_ranked_avg_prices"
+[0m09:06:05.877247 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.002 seconds
+[0m09:06:05.925240 [debug] [Thread-1 (]: On model.zap_imoveis.gold_floorsize_ranked_avg_prices: COMMIT
+[0m09:06:05.929620 [debug] [Thread-1 (]: Using postgres connection "model.zap_imoveis.gold_floorsize_ranked_avg_prices"
+[0m09:06:05.931271 [debug] [Thread-1 (]: On model.zap_imoveis.gold_floorsize_ranked_avg_prices: COMMIT
+[0m09:06:05.937185 [debug] [Thread-1 (]: SQL status: COMMIT in 0.003 seconds
+[0m09:06:05.950911 [debug] [Thread-1 (]: Applying DROP to: "foo"."zap"."gold_floorsize_ranked_avg_prices__dbt_backup"
+[0m09:06:05.960160 [debug] [Thread-1 (]: Using postgres connection "model.zap_imoveis.gold_floorsize_ranked_avg_prices"
+[0m09:06:05.961331 [debug] [Thread-1 (]: On model.zap_imoveis.gold_floorsize_ranked_avg_prices: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "zap", "target_name": "dev", "node_id": "model.zap_imoveis.gold_floorsize_ranked_avg_prices"} */
+drop table if exists "foo"."zap"."gold_floorsize_ranked_avg_prices__dbt_backup" cascade
+[0m09:06:05.970492 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.007 seconds
+[0m09:06:05.976352 [debug] [Thread-1 (]: On model.zap_imoveis.gold_floorsize_ranked_avg_prices: Close
+[0m09:06:05.990283 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '904cf372-b976-4099-a36b-0b99807c6f73', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2adc644a60>]}
+[0m09:06:05.992541 [info ] [Thread-1 (]: 1 of 1 OK created sql table model zap.gold_floorsize_ranked_avg_prices ......... [[32mSELECT 181[0m in 0.50s]
+[0m09:06:06.000725 [debug] [Thread-1 (]: Finished running node model.zap_imoveis.gold_floorsize_ranked_avg_prices
+[0m09:06:06.009518 [debug] [MainThread]: Using postgres connection "master"
+[0m09:06:06.010752 [debug] [MainThread]: On master: BEGIN
+[0m09:06:06.012556 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m09:06:06.049381 [debug] [MainThread]: SQL status: BEGIN in 0.037 seconds
+[0m09:06:06.051039 [debug] [MainThread]: On master: COMMIT
+[0m09:06:06.052807 [debug] [MainThread]: Using postgres connection "master"
+[0m09:06:06.054101 [debug] [MainThread]: On master: COMMIT
+[0m09:06:06.056548 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m09:06:06.057881 [debug] [MainThread]: On master: Close
+[0m09:06:06.060014 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m09:06:06.062208 [debug] [MainThread]: Connection 'list_foo' was properly closed.
+[0m09:06:06.070719 [debug] [MainThread]: Connection 'model.zap_imoveis.gold_floorsize_ranked_avg_prices' was properly closed.
+[0m09:06:06.081265 [info ] [MainThread]: 
+[0m09:06:06.088614 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 1.83 seconds (1.83s).
+[0m09:06:06.099184 [debug] [MainThread]: Command end result
+[0m09:06:06.229256 [debug] [MainThread]: Wrote artifact WritableManifest to /home/syco/projects/ZAP-IMOVEIS/target/manifest.json
+[0m09:06:06.233910 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/syco/projects/ZAP-IMOVEIS/target/semantic_manifest.json
+[0m09:06:06.252215 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/syco/projects/ZAP-IMOVEIS/target/run_results.json
+[0m09:06:06.253593 [info ] [MainThread]: 
+[0m09:06:06.258531 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m09:06:06.262101 [info ] [MainThread]: 
+[0m09:06:06.264486 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m09:06:06.268274 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 5.529053, "process_in_blocks": "46848", "process_kernel_time": 1.504157, "process_mem_max_rss": "115372", "process_out_blocks": "1808", "process_user_time": 6.487425}
+[0m09:06:06.270202 [debug] [MainThread]: Command `dbt run` succeeded at 09:06:06.269907 after 5.53 seconds
+[0m09:06:06.271697 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2adadde8f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2ada53ead0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2ada53e830>]}
+[0m09:06:06.272845 [debug] [MainThread]: Flushing usage events
+[0m09:06:07.172196 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m00:51:41.628159 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f09ee73aa40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f09ed6c2d70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f09ed6c2dd0>]}
+
+
+============================== 00:51:41.640541 | ecaa78ca-b6a0-4e97-850d-7075b05d4e9a ==============================
+[0m00:51:41.640541 [info ] [MainThread]: Running with dbt=1.9.2
+[0m00:51:41.642690 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/syco/projects/ZAP-IMOVEIS', 'version_check': 'True', 'warn_error': 'None', 'log_path': '/home/syco/projects/ZAP-IMOVEIS/logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt run', 'log_format': 'default', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m00:51:42.121097 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ecaa78ca-b6a0-4e97-850d-7075b05d4e9a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f09ecd80df0>]}
+[0m00:51:42.245069 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'ecaa78ca-b6a0-4e97-850d-7075b05d4e9a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f09edcfb580>]}
+[0m00:51:42.249644 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m00:51:42.450835 [debug] [MainThread]: checksum: 12b12750b70de726cfd89136b8e24afc3f3e77597a97bff40ab7e5f9b39d5e18, vars: {}, profile: , target: , version: 1.9.2
+[0m00:51:42.951650 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m00:51:42.952746 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m00:51:43.090321 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'ecaa78ca-b6a0-4e97-850d-7075b05d4e9a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f09eb904130>]}
+[0m00:51:43.341790 [debug] [MainThread]: Wrote artifact WritableManifest to /home/syco/projects/ZAP-IMOVEIS/target/manifest.json
+[0m00:51:43.346987 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/syco/projects/ZAP-IMOVEIS/target/semantic_manifest.json
+[0m00:51:43.402313 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'ecaa78ca-b6a0-4e97-850d-7075b05d4e9a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f09eb904ee0>]}
+[0m00:51:43.403502 [info ] [MainThread]: Found 1 model, 6 data tests, 1 source, 433 macros
+[0m00:51:43.405927 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ecaa78ca-b6a0-4e97-850d-7075b05d4e9a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f09eb904dc0>]}
+[0m00:51:43.409839 [info ] [MainThread]: 
+[0m00:51:43.411603 [info ] [MainThread]: Concurrency: 2 threads (target='dev')
+[0m00:51:43.412875 [info ] [MainThread]: 
+[0m00:51:43.414677 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m00:51:43.417709 [debug] [ThreadPool]: Acquiring new postgres connection 'list_foo'
+[0m00:51:43.516559 [debug] [ThreadPool]: Using postgres connection "list_foo"
+[0m00:51:43.517404 [debug] [ThreadPool]: On list_foo: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "zap", "target_name": "dev", "connection_name": "list_foo"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m00:51:43.518036 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:51:43.531836 [debug] [ThreadPool]: SQL status: SELECT 5 in 0.014 seconds
+[0m00:51:43.535361 [debug] [ThreadPool]: On list_foo: Close
+[0m00:51:43.539167 [debug] [ThreadPool]: Acquiring new postgres connection 'list_foo_zap'
+[0m00:51:43.552012 [debug] [ThreadPool]: Using postgres connection "list_foo_zap"
+[0m00:51:43.553713 [debug] [ThreadPool]: On list_foo_zap: BEGIN
+[0m00:51:43.555757 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:51:43.572910 [debug] [ThreadPool]: SQL status: BEGIN in 0.017 seconds
+[0m00:51:43.575090 [debug] [ThreadPool]: Using postgres connection "list_foo_zap"
+[0m00:51:43.576203 [debug] [ThreadPool]: On list_foo_zap: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "zap", "target_name": "dev", "connection_name": "list_foo_zap"} */
+select
+      'foo' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'zap'
+    union all
+    select
+      'foo' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'zap'
+    union all
+    select
+      'foo' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'zap'
+  
+[0m00:51:43.588463 [debug] [ThreadPool]: SQL status: SELECT 2 in 0.011 seconds
+[0m00:51:43.592287 [debug] [ThreadPool]: On list_foo_zap: ROLLBACK
+[0m00:51:43.594077 [debug] [ThreadPool]: On list_foo_zap: Close
+[0m00:51:43.603382 [debug] [MainThread]: Using postgres connection "master"
+[0m00:51:43.604427 [debug] [MainThread]: On master: BEGIN
+[0m00:51:43.605059 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m00:51:43.619538 [debug] [MainThread]: SQL status: BEGIN in 0.014 seconds
+[0m00:51:43.620978 [debug] [MainThread]: Using postgres connection "master"
+[0m00:51:43.622993 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "zap", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m00:51:43.654048 [debug] [MainThread]: SQL status: SELECT 0 in 0.030 seconds
+[0m00:51:43.656370 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ecaa78ca-b6a0-4e97-850d-7075b05d4e9a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f09eb940c40>]}
+[0m00:51:43.657439 [debug] [MainThread]: On master: ROLLBACK
+[0m00:51:43.658968 [debug] [MainThread]: Using postgres connection "master"
+[0m00:51:43.660193 [debug] [MainThread]: On master: BEGIN
+[0m00:51:43.662011 [debug] [MainThread]: SQL status: BEGIN in 0.001 seconds
+[0m00:51:43.662895 [debug] [MainThread]: On master: COMMIT
+[0m00:51:43.663744 [debug] [MainThread]: Using postgres connection "master"
+[0m00:51:43.664458 [debug] [MainThread]: On master: COMMIT
+[0m00:51:43.666253 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m00:51:43.668473 [debug] [MainThread]: On master: Close
+[0m00:51:43.676574 [debug] [Thread-1 (]: Began running node model.zap_imoveis.gold_floorsize_ranked_avg_prices
+[0m00:51:43.678061 [info ] [Thread-1 (]: 1 of 1 START sql table model zap.gold_floorsize_ranked_avg_prices .............. [RUN]
+[0m00:51:43.679548 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_foo_zap, now model.zap_imoveis.gold_floorsize_ranked_avg_prices)
+[0m00:51:43.680556 [debug] [Thread-1 (]: Began compiling node model.zap_imoveis.gold_floorsize_ranked_avg_prices
+[0m00:51:43.697747 [debug] [Thread-1 (]: Writing injected SQL for node "model.zap_imoveis.gold_floorsize_ranked_avg_prices"
+[0m00:51:43.699549 [debug] [Thread-1 (]: Began executing node model.zap_imoveis.gold_floorsize_ranked_avg_prices
+[0m00:51:43.894441 [debug] [Thread-1 (]: Writing runtime sql for node "model.zap_imoveis.gold_floorsize_ranked_avg_prices"
+[0m00:51:43.896253 [debug] [Thread-1 (]: Using postgres connection "model.zap_imoveis.gold_floorsize_ranked_avg_prices"
+[0m00:51:43.897238 [debug] [Thread-1 (]: On model.zap_imoveis.gold_floorsize_ranked_avg_prices: BEGIN
+[0m00:51:43.898008 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m00:51:43.913103 [debug] [Thread-1 (]: SQL status: BEGIN in 0.015 seconds
+[0m00:51:43.913958 [debug] [Thread-1 (]: Using postgres connection "model.zap_imoveis.gold_floorsize_ranked_avg_prices"
+[0m00:51:43.914713 [debug] [Thread-1 (]: On model.zap_imoveis.gold_floorsize_ranked_avg_prices: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "zap", "target_name": "dev", "node_id": "model.zap_imoveis.gold_floorsize_ranked_avg_prices"} */
+
+  
+    
+
+  create  table "foo"."zap"."gold_floorsize_ranked_avg_prices__dbt_tmp"
+  
+  
+    as
+  
+  (
+    with source as (
+    SELECT * FROM "foo"."zap"."silver_zapimoveis" 
+),
+rank_floorsize as (
+	select 
+	*, 
+	case 
+		when sz.floor_size <= 30
+		then 'E'
+		when sz.floor_size <= 60
+		then 'D'
+		when sz.floor_size <= 90
+		then 'C'
+		when sz.floor_size <= 120
+		then 'B'
+        WHEN sz.floor_size > 120
+        THEN 'A'
+	end as floor_size_rank
+	from source sz 
+)
+select
+*,
+price_rent/floor_size as price_rent_per_m2
+from rank_floorsize 
+order by price_rent_per_m2
+  );
+  
+[0m00:51:43.927110 [debug] [Thread-1 (]: SQL status: SELECT 467 in 0.011 seconds
+[0m00:51:43.945816 [debug] [Thread-1 (]: Using postgres connection "model.zap_imoveis.gold_floorsize_ranked_avg_prices"
+[0m00:51:43.946698 [debug] [Thread-1 (]: On model.zap_imoveis.gold_floorsize_ranked_avg_prices: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "zap", "target_name": "dev", "node_id": "model.zap_imoveis.gold_floorsize_ranked_avg_prices"} */
+alter table "foo"."zap"."gold_floorsize_ranked_avg_prices" rename to "gold_floorsize_ranked_avg_prices__dbt_backup"
+[0m00:51:43.948179 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m00:51:43.955046 [debug] [Thread-1 (]: Using postgres connection "model.zap_imoveis.gold_floorsize_ranked_avg_prices"
+[0m00:51:43.956252 [debug] [Thread-1 (]: On model.zap_imoveis.gold_floorsize_ranked_avg_prices: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "zap", "target_name": "dev", "node_id": "model.zap_imoveis.gold_floorsize_ranked_avg_prices"} */
+alter table "foo"."zap"."gold_floorsize_ranked_avg_prices__dbt_tmp" rename to "gold_floorsize_ranked_avg_prices"
+[0m00:51:43.957679 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m00:51:43.987095 [debug] [Thread-1 (]: On model.zap_imoveis.gold_floorsize_ranked_avg_prices: COMMIT
+[0m00:51:43.988239 [debug] [Thread-1 (]: Using postgres connection "model.zap_imoveis.gold_floorsize_ranked_avg_prices"
+[0m00:51:43.989187 [debug] [Thread-1 (]: On model.zap_imoveis.gold_floorsize_ranked_avg_prices: COMMIT
+[0m00:51:43.991697 [debug] [Thread-1 (]: SQL status: COMMIT in 0.001 seconds
+[0m00:51:44.001959 [debug] [Thread-1 (]: Applying DROP to: "foo"."zap"."gold_floorsize_ranked_avg_prices__dbt_backup"
+[0m00:51:44.010754 [debug] [Thread-1 (]: Using postgres connection "model.zap_imoveis.gold_floorsize_ranked_avg_prices"
+[0m00:51:44.011794 [debug] [Thread-1 (]: On model.zap_imoveis.gold_floorsize_ranked_avg_prices: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "zap", "target_name": "dev", "node_id": "model.zap_imoveis.gold_floorsize_ranked_avg_prices"} */
+drop table if exists "foo"."zap"."gold_floorsize_ranked_avg_prices__dbt_backup" cascade
+[0m00:51:44.018900 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.004 seconds
+[0m00:51:44.023455 [debug] [Thread-1 (]: On model.zap_imoveis.gold_floorsize_ranked_avg_prices: Close
+[0m00:51:44.031548 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ecaa78ca-b6a0-4e97-850d-7075b05d4e9a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f09ea7a0b20>]}
+[0m00:51:44.033844 [info ] [Thread-1 (]: 1 of 1 OK created sql table model zap.gold_floorsize_ranked_avg_prices ......... [[32mSELECT 467[0m in 0.35s]
+[0m00:51:44.036278 [debug] [Thread-1 (]: Finished running node model.zap_imoveis.gold_floorsize_ranked_avg_prices
+[0m00:51:44.040472 [debug] [MainThread]: Using postgres connection "master"
+[0m00:51:44.041827 [debug] [MainThread]: On master: BEGIN
+[0m00:51:44.042928 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m00:51:44.054890 [debug] [MainThread]: SQL status: BEGIN in 0.012 seconds
+[0m00:51:44.056454 [debug] [MainThread]: On master: COMMIT
+[0m00:51:44.057166 [debug] [MainThread]: Using postgres connection "master"
+[0m00:51:44.057946 [debug] [MainThread]: On master: COMMIT
+[0m00:51:44.059409 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m00:51:44.060493 [debug] [MainThread]: On master: Close
+[0m00:51:44.061793 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m00:51:44.062625 [debug] [MainThread]: Connection 'list_foo' was properly closed.
+[0m00:51:44.063483 [debug] [MainThread]: Connection 'model.zap_imoveis.gold_floorsize_ranked_avg_prices' was properly closed.
+[0m00:51:44.064349 [info ] [MainThread]: 
+[0m00:51:44.065495 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 0.65 seconds (0.65s).
+[0m00:51:44.067643 [debug] [MainThread]: Command end result
+[0m00:51:44.116434 [debug] [MainThread]: Wrote artifact WritableManifest to /home/syco/projects/ZAP-IMOVEIS/target/manifest.json
+[0m00:51:44.119905 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/syco/projects/ZAP-IMOVEIS/target/semantic_manifest.json
+[0m00:51:44.144607 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/syco/projects/ZAP-IMOVEIS/target/run_results.json
+[0m00:51:44.146212 [info ] [MainThread]: 
+[0m00:51:44.148788 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m00:51:44.151234 [info ] [MainThread]: 
+[0m00:51:44.153667 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m00:51:44.156819 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 2.6763368, "process_in_blocks": "40952", "process_kernel_time": 1.372556, "process_mem_max_rss": "115228", "process_out_blocks": "1808", "process_user_time": 5.118146}
+[0m00:51:44.158962 [debug] [MainThread]: Command `dbt run` succeeded at 00:51:44.158507 after 2.68 seconds
+[0m00:51:44.160605 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f09ee73aa40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f09eb914130>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f09eb9148b0>]}
+[0m00:51:44.161930 [debug] [MainThread]: Flushing usage events
+[0m00:51:45.010844 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:45:22.413100 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5075b1a9b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f50757cb850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5074a236a0>]}
+
+
+============================== 16:45:22.421103 | 80570ce0-64ec-4539-80c9-3622effc887b ==============================
+[0m16:45:22.421103 [info ] [MainThread]: Running with dbt=1.9.2
+[0m16:45:22.422338 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/syco/projects/ZAP-IMOVEIS', 'debug': 'False', 'version_check': 'True', 'log_path': '/home/syco/projects/ZAP-IMOVEIS/logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m16:45:22.751568 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '80570ce0-64ec-4539-80c9-3622effc887b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f507598e830>]}
+[0m16:45:22.862500 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '80570ce0-64ec-4539-80c9-3622effc887b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f507527b4f0>]}
+[0m16:45:22.866009 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m16:45:23.033049 [debug] [MainThread]: checksum: 12b12750b70de726cfd89136b8e24afc3f3e77597a97bff40ab7e5f9b39d5e18, vars: {}, profile: , target: , version: 1.9.2
+[0m16:45:23.423853 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m16:45:23.424758 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m16:45:23.540357 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '80570ce0-64ec-4539-80c9-3622effc887b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f50731ec130>]}
+[0m16:45:23.744968 [debug] [MainThread]: Wrote artifact WritableManifest to /home/syco/projects/ZAP-IMOVEIS/target/manifest.json
+[0m16:45:23.750044 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/syco/projects/ZAP-IMOVEIS/target/semantic_manifest.json
+[0m16:45:23.808045 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '80570ce0-64ec-4539-80c9-3622effc887b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f50731ecdf0>]}
+[0m16:45:23.809216 [info ] [MainThread]: Found 1 model, 6 data tests, 1 source, 433 macros
+[0m16:45:23.810493 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '80570ce0-64ec-4539-80c9-3622effc887b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f50731ecd30>]}
+[0m16:45:23.813571 [info ] [MainThread]: 
+[0m16:45:23.814604 [info ] [MainThread]: Concurrency: 2 threads (target='dev')
+[0m16:45:23.815466 [info ] [MainThread]: 
+[0m16:45:23.816691 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m16:45:23.819078 [debug] [ThreadPool]: Acquiring new postgres connection 'list_foo'
+[0m16:45:23.917409 [debug] [ThreadPool]: Using postgres connection "list_foo"
+[0m16:45:23.918548 [debug] [ThreadPool]: On list_foo: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "zap", "target_name": "dev", "connection_name": "list_foo"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m16:45:23.919962 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:45:23.935020 [debug] [ThreadPool]: SQL status: SELECT 5 in 0.015 seconds
+[0m16:45:23.940549 [debug] [ThreadPool]: On list_foo: Close
+[0m16:45:23.946240 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_foo, now list_foo_zap)
+[0m16:45:23.957154 [debug] [ThreadPool]: Using postgres connection "list_foo_zap"
+[0m16:45:23.958252 [debug] [ThreadPool]: On list_foo_zap: BEGIN
+[0m16:45:23.959012 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:45:23.971680 [debug] [ThreadPool]: SQL status: BEGIN in 0.013 seconds
+[0m16:45:23.972746 [debug] [ThreadPool]: Using postgres connection "list_foo_zap"
+[0m16:45:23.974207 [debug] [ThreadPool]: On list_foo_zap: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "zap", "target_name": "dev", "connection_name": "list_foo_zap"} */
+select
+      'foo' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'zap'
+    union all
+    select
+      'foo' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'zap'
+    union all
+    select
+      'foo' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'zap'
+  
+[0m16:45:23.984628 [debug] [ThreadPool]: SQL status: SELECT 2 in 0.009 seconds
+[0m16:45:23.987356 [debug] [ThreadPool]: On list_foo_zap: ROLLBACK
+[0m16:45:23.989379 [debug] [ThreadPool]: On list_foo_zap: Close
+[0m16:45:24.005994 [debug] [MainThread]: Using postgres connection "master"
+[0m16:45:24.007643 [debug] [MainThread]: On master: BEGIN
+[0m16:45:24.008402 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:45:24.020388 [debug] [MainThread]: SQL status: BEGIN in 0.012 seconds
+[0m16:45:24.021583 [debug] [MainThread]: Using postgres connection "master"
+[0m16:45:24.022839 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "zap", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m16:45:24.053275 [debug] [MainThread]: SQL status: SELECT 0 in 0.028 seconds
+[0m16:45:24.055714 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '80570ce0-64ec-4539-80c9-3622effc887b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5072d294b0>]}
+[0m16:45:24.057656 [debug] [MainThread]: On master: ROLLBACK
+[0m16:45:24.059391 [debug] [MainThread]: Using postgres connection "master"
+[0m16:45:24.060385 [debug] [MainThread]: On master: BEGIN
+[0m16:45:24.062295 [debug] [MainThread]: SQL status: BEGIN in 0.001 seconds
+[0m16:45:24.063340 [debug] [MainThread]: On master: COMMIT
+[0m16:45:24.064114 [debug] [MainThread]: Using postgres connection "master"
+[0m16:45:24.064811 [debug] [MainThread]: On master: COMMIT
+[0m16:45:24.066397 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m16:45:24.067235 [debug] [MainThread]: On master: Close
+[0m16:45:24.074600 [debug] [Thread-1 (]: Began running node model.zap_imoveis.gold_floorsize_ranked_avg_prices
+[0m16:45:24.075968 [info ] [Thread-1 (]: 1 of 1 START sql table model zap.gold_floorsize_ranked_avg_prices .............. [RUN]
+[0m16:45:24.077507 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_foo_zap, now model.zap_imoveis.gold_floorsize_ranked_avg_prices)
+[0m16:45:24.078473 [debug] [Thread-1 (]: Began compiling node model.zap_imoveis.gold_floorsize_ranked_avg_prices
+[0m16:45:24.094148 [debug] [Thread-1 (]: Writing injected SQL for node "model.zap_imoveis.gold_floorsize_ranked_avg_prices"
+[0m16:45:24.095835 [debug] [Thread-1 (]: Began executing node model.zap_imoveis.gold_floorsize_ranked_avg_prices
+[0m16:45:24.275458 [debug] [Thread-1 (]: Writing runtime sql for node "model.zap_imoveis.gold_floorsize_ranked_avg_prices"
+[0m16:45:24.277554 [debug] [Thread-1 (]: Using postgres connection "model.zap_imoveis.gold_floorsize_ranked_avg_prices"
+[0m16:45:24.278589 [debug] [Thread-1 (]: On model.zap_imoveis.gold_floorsize_ranked_avg_prices: BEGIN
+[0m16:45:24.279614 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:45:24.292816 [debug] [Thread-1 (]: SQL status: BEGIN in 0.013 seconds
+[0m16:45:24.293943 [debug] [Thread-1 (]: Using postgres connection "model.zap_imoveis.gold_floorsize_ranked_avg_prices"
+[0m16:45:24.295192 [debug] [Thread-1 (]: On model.zap_imoveis.gold_floorsize_ranked_avg_prices: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "zap", "target_name": "dev", "node_id": "model.zap_imoveis.gold_floorsize_ranked_avg_prices"} */
+
+  
+    
+
+  create  table "foo"."zap"."gold_floorsize_ranked_avg_prices__dbt_tmp"
+  
+  
+    as
+  
+  (
+    with source as (
+    SELECT * FROM "foo"."zap"."silver_zapimoveis" 
+),
+rank_floorsize as (
+	select 
+	*, 
+	case 
+		when sz.floor_size <= 30
+		then 'E'
+		when sz.floor_size <= 60
+		then 'D'
+		when sz.floor_size <= 90
+		then 'C'
+		when sz.floor_size <= 120
+		then 'B'
+        WHEN sz.floor_size > 120
+        THEN 'A'
+	end as floor_size_rank
+	from source sz 
+)
+select
+*,
+price_rent/floor_size as price_rent_per_m2
+from rank_floorsize 
+order by price_rent_per_m2
+  );
+  
+[0m16:45:24.327440 [debug] [Thread-1 (]: SQL status: SELECT 2322 in 0.031 seconds
+[0m16:45:24.346176 [debug] [Thread-1 (]: Using postgres connection "model.zap_imoveis.gold_floorsize_ranked_avg_prices"
+[0m16:45:24.347946 [debug] [Thread-1 (]: On model.zap_imoveis.gold_floorsize_ranked_avg_prices: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "zap", "target_name": "dev", "node_id": "model.zap_imoveis.gold_floorsize_ranked_avg_prices"} */
+alter table "foo"."zap"."gold_floorsize_ranked_avg_prices" rename to "gold_floorsize_ranked_avg_prices__dbt_backup"
+[0m16:45:24.350717 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m16:45:24.358961 [debug] [Thread-1 (]: Using postgres connection "model.zap_imoveis.gold_floorsize_ranked_avg_prices"
+[0m16:45:24.360017 [debug] [Thread-1 (]: On model.zap_imoveis.gold_floorsize_ranked_avg_prices: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "zap", "target_name": "dev", "node_id": "model.zap_imoveis.gold_floorsize_ranked_avg_prices"} */
+alter table "foo"."zap"."gold_floorsize_ranked_avg_prices__dbt_tmp" rename to "gold_floorsize_ranked_avg_prices"
+[0m16:45:24.361621 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m16:45:24.392168 [debug] [Thread-1 (]: On model.zap_imoveis.gold_floorsize_ranked_avg_prices: COMMIT
+[0m16:45:24.393310 [debug] [Thread-1 (]: Using postgres connection "model.zap_imoveis.gold_floorsize_ranked_avg_prices"
+[0m16:45:24.394155 [debug] [Thread-1 (]: On model.zap_imoveis.gold_floorsize_ranked_avg_prices: COMMIT
+[0m16:45:24.397964 [debug] [Thread-1 (]: SQL status: COMMIT in 0.003 seconds
+[0m16:45:24.409771 [debug] [Thread-1 (]: Applying DROP to: "foo"."zap"."gold_floorsize_ranked_avg_prices__dbt_backup"
+[0m16:45:24.418481 [debug] [Thread-1 (]: Using postgres connection "model.zap_imoveis.gold_floorsize_ranked_avg_prices"
+[0m16:45:24.420586 [debug] [Thread-1 (]: On model.zap_imoveis.gold_floorsize_ranked_avg_prices: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "zap", "target_name": "dev", "node_id": "model.zap_imoveis.gold_floorsize_ranked_avg_prices"} */
+drop table if exists "foo"."zap"."gold_floorsize_ranked_avg_prices__dbt_backup" cascade
+[0m16:45:24.427900 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.005 seconds
+[0m16:45:24.433227 [debug] [Thread-1 (]: On model.zap_imoveis.gold_floorsize_ranked_avg_prices: Close
+[0m16:45:24.438375 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '80570ce0-64ec-4539-80c9-3622effc887b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5077378a60>]}
+[0m16:45:24.439984 [info ] [Thread-1 (]: 1 of 1 OK created sql table model zap.gold_floorsize_ranked_avg_prices ......... [[32mSELECT 2322[0m in 0.36s]
+[0m16:45:24.443767 [debug] [Thread-1 (]: Finished running node model.zap_imoveis.gold_floorsize_ranked_avg_prices
+[0m16:45:24.446871 [debug] [MainThread]: Using postgres connection "master"
+[0m16:45:24.448222 [debug] [MainThread]: On master: BEGIN
+[0m16:45:24.449496 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m16:45:24.460010 [debug] [MainThread]: SQL status: BEGIN in 0.010 seconds
+[0m16:45:24.460971 [debug] [MainThread]: On master: COMMIT
+[0m16:45:24.462240 [debug] [MainThread]: Using postgres connection "master"
+[0m16:45:24.463196 [debug] [MainThread]: On master: COMMIT
+[0m16:45:24.464536 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m16:45:24.465784 [debug] [MainThread]: On master: Close
+[0m16:45:24.469469 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:45:24.470424 [debug] [MainThread]: Connection 'model.zap_imoveis.gold_floorsize_ranked_avg_prices' was properly closed.
+[0m16:45:24.471535 [info ] [MainThread]: 
+[0m16:45:24.472574 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 0.66 seconds (0.66s).
+[0m16:45:24.474468 [debug] [MainThread]: Command end result
+[0m16:45:24.513101 [debug] [MainThread]: Wrote artifact WritableManifest to /home/syco/projects/ZAP-IMOVEIS/target/manifest.json
+[0m16:45:24.516073 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/syco/projects/ZAP-IMOVEIS/target/semantic_manifest.json
+[0m16:45:24.531189 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/syco/projects/ZAP-IMOVEIS/target/run_results.json
+[0m16:45:24.532276 [info ] [MainThread]: 
+[0m16:45:24.533602 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m16:45:24.534557 [info ] [MainThread]: 
+[0m16:45:24.535475 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m16:45:24.537599 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 2.2367632, "process_in_blocks": "39256", "process_kernel_time": 0.532631, "process_mem_max_rss": "115268", "process_out_blocks": "1808", "process_user_time": 4.210328}
+[0m16:45:24.538925 [debug] [MainThread]: Command `dbt run` succeeded at 16:45:24.538567 after 2.24 seconds
+[0m16:45:24.541512 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5075b1a9b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5072d0da80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5072d0d1b0>]}
+[0m16:45:24.542501 [debug] [MainThread]: Flushing usage events
+[0m16:45:25.559315 [debug] [MainThread]: An error was encountered while trying to flush usage events
